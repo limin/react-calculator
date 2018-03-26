@@ -1,6 +1,6 @@
 .display-container {
   align-items: center;
-  background: var(--display-background);
+  background: var(--display-background-color);
   display: flex;
   padding: 4% 4% 2% 4%;
   width: 92%;

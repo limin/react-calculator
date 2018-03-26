@@ -4,10 +4,10 @@ import Key from '../Key/Key';
 import './Keypad.css';
 
 const Keypad = ({callOperator, numbers, operators, setOperator, updateDisplay}) => {
-  
+
   numbers = numbers.map(number => {
     return (
-      <Key 
+      <Key
         key={number}
         keyAction={updateDisplay}
         keyType="number-key"
@@ -18,7 +18,7 @@ const Keypad = ({callOperator, numbers, operators, setOperator, updateDisplay}) 
 
   operators = operators.map(operator => {
     return (
-      <Key 
+      <Key
         key={operator}
         keyAction={setOperator}
         keyType="operator-key"
@@ -47,12 +47,11 @@ const Keypad = ({callOperator, numbers, operators, setOperator, updateDisplay}) 
 }
 
 Keypad.propTypes = {
-  callOperator: PropTypes.func, 
-  handleKeyPress: PropTypes.func, 
-  numbers: PropTypes.array.isRequired, 
+  callOperator: PropTypes.func.isRequired,
+  numbers: PropTypes.array.isRequired,
   operators: PropTypes.array.isRequired,
-  setOperator: PropTypes.func, 
-  updateDisplay: PropTypes.func,
+  setOperator: PropTypes.func.isRequired,
+  updateDisplay: PropTypes.func.isRequired,
 }
 
 export default Keypad;

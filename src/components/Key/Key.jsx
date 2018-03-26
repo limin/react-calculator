@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import './Key.css';
 
 const Key = ({keyAction, keyType, keyValue}) => {
-  const keyClass = `key-container ${keyType}`;
-  
   return (
     <div 
-      className={keyClass}
-      onClick={event => {keyAction(event, keyValue)}}
+      className={`key-container ${keyType}`}
+      onClick={() => {keyAction(keyValue)}}
     >
       <p className="key-value">
         {keyValue}
@@ -18,8 +16,8 @@ const Key = ({keyAction, keyType, keyValue}) => {
 }
 
 Key.propTypes = {
-  keyAction: PropTypes.func,
-  keyType: PropTypes.string.isRequired, 
+  keyAction: PropTypes.func.isRequired,
+  keyType: PropTypes.string.isRequired,
   keyValue: PropTypes.string.isRequired,
 }
 

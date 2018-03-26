@@ -29,11 +29,10 @@ class Calculator extends Component {
     document.removeEventListener('keydown', this.handleKeyPress);
   } 
 
-  callOperator = (event) => {
-    event.preventDefault()
+  callOperator = () => {
     let {displayValue, selectedOperator, storedValue} = this.state;
     const updateStoredValue = displayValue;
-    
+
     displayValue = parseInt(displayValue, 10);
     storedValue = parseInt(storedValue, 10);
 
@@ -57,32 +56,32 @@ class Calculator extends Component {
     displayValue = displayValue.toString();
     selectedOperator = '';
     if (displayValue === 'NaN' || displayValue === 'Infinity') displayValue ='0';
+
     this.setState({displayValue, selectedOperator, storedValue: updateStoredValue});
   }
 
   handleKeyPress = (event) => {
     const {numbers, operators} = this.state;
     
-    if (event.key === 'Backspace') this.updateDisplay(event, 'ce');
-    if (event.key === 'Enter' || event.key === '=') this.callOperator(event);
+    if (event.key === 'Backspace') this.updateDisplay('ce');
+    if (event.key === 'Enter' || event.key === '=') this.callOperator();
 
     numbers.forEach((number) => {
-      if (event.key === number){
-        this.updateDisplay(event, number);
+      if (event.key === number) {
+        this.updateDisplay(number);
       }
     });
     
     operators.forEach((operator) => {
-      if (event.key === operator){
-        this.setOperator(event, operator);
+      if (event.key === operator) {
+        this.setOperator(operator);
       }
     });
   }
 
-  setOperator = (event, value) => {
-    event.preventDefault()
+  setOperator = (value) => {
     let {displayValue, selectedOperator, storedValue} = this.state;
-
+    
     if (selectedOperator === '') {
       storedValue = displayValue;
       displayValue = '0';
@@ -94,23 +93,15 @@ class Calculator extends Component {
     this.setState({displayValue, selectedOperator, storedValue});
   }
 
-  updateDisplay = (event, value) => {
-    event.preventDefault()
+  updateDisplay(value) {
     let {displayValue} = this.state;
-  
-    if (value === '.' && displayValue.includes('.')) value = '';
     
-    // prevent multiple occurences of '.'
     if (value === '.' && displayValue.includes('.')) value = '';
-    
+
     if (value === 'ce') {
-      // deletes last char in displayValue
       displayValue = displayValue.substr(0, displayValue.length - 1);
-      // set displayValue to '0' if displayValue is empty string
       if (displayValue === '') displayValue = '0';
     } else {
-      // replace displayValue with value if displayValue equal to '0'
-      // else concatenate displayValue and value
       displayValue === '0' ? displayValue = value : displayValue += value;
     }
 

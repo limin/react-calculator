@@ -5,8 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Keypad
+    callOperator={[Function]}
     numbers={Array []}
     operators={Array []}
+    setOperator={[Function]}
+    updateDisplay={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -35,7 +38,7 @@ ShallowWrapper {
           className="submit-container"
 >
           <Key
-                    keyAction={undefined}
+                    keyAction={[Function]}
                     keyType="submit-key"
                     keyValue="="
           />
@@ -75,7 +78,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Key
-            keyAction={undefined}
+            keyAction={[Function]}
             keyType="submit-key"
             keyValue="="
 />,
@@ -87,7 +90,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "keyAction": undefined,
+            "keyAction": [Function],
             "keyType": "submit-key",
             "keyValue": "=",
           },
@@ -121,7 +124,7 @@ ShallowWrapper {
             className="submit-container"
 >
             <Key
-                        keyAction={undefined}
+                        keyAction={[Function]}
                         keyType="submit-key"
                         keyValue="="
             />
@@ -161,7 +164,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Key
-              keyAction={undefined}
+              keyAction={[Function]}
               keyType="submit-key"
               keyValue="="
 />,
@@ -173,7 +176,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "keyAction": undefined,
+              "keyAction": [Function],
               "keyType": "submit-key",
               "keyValue": "=",
             },
