@@ -25,7 +25,6 @@ describe('Keypad', () => {
     expect(wrapper.find('div').length).toEqual(4);
   });
 
-
   it('should render an instance of the Key component for each index of numbers, operators, and the submit Key', () => {
     const numbers = ['0', '1'];
     const operators = ['+', '-'];
@@ -48,16 +47,6 @@ describe('mounted Keypad', () => {
         updateDisplay={jest.fn()}
       />
     );
-  });
-
-  it('should render the Key component', () => {
-    expect(wrapper.containsMatchingElement([
-      <Key 
-        keyAction={jest.fn()}
-        keyType="" 
-        keyValue=""
-      />
-    ])).toEqual(true);
   });
   
   it('renders the values of numbers to the DOM', () => {
