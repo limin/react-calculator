@@ -6,8 +6,8 @@ app variables
   /* background colors */
   --action-key-color: #545454;
   --action-key-color-hover: #2a2a2a;
+  --calculator-background-color: #696969;
   --display-background-color: #1d1f1f;
-  --keypad-background-color: #696969;
   --number-key-color: #696969;
   --number-key-color-hover: #3f3f3f;
   --submit-key-color: #d18800;
@@ -29,15 +29,23 @@ app variables
   --key-text-weight: 700;
   
   /* calculator dimensions */
-   --calculator-height: 72%;
-   --calculator-width: 36%;
+  --calculator-height: 72%;
+  --calculator-width: 36%;
+
+  /* display dimensions */
+  --display-height: 24%;
+  --display-width: 92%;
+
+  /* keypad dimensions */
+  --keypad-height: 72%;
+  --keypad-width: 96%;
 }
 
 @media screen and (max-width: 1024px) {
   :root {
     /* font sizes */
-    --display-text-size: 10em;
-    --key-text-size: 6em;
+    --display-text-size: 6em;
+    --key-text-size: 3em;
 
     /* calculator dimensions */
     --calculator-height: 100%;

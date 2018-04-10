@@ -1,11 +1,10 @@
 .keypad-container {
-  background: var(--keypad-background-color);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 76%;
+  height: var(--keypad-height);
   padding: 2%;
-  width: 96%;
+  width: var(--keypad-width);
 }
 
 .numbers-container {

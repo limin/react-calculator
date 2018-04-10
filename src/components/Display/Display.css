@@ -2,8 +2,9 @@
   align-items: center;
   background: var(--display-background-color);
   display: flex;
-  padding: 4% 4% 2% 4%;
-  width: 92%;
+  height: var(--display-height);
+  padding: 0 4%;
+  width: var(--display-width);
 }
 
 .display-value {
