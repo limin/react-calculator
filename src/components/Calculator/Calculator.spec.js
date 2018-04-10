@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
 import Calculator from './Calculator';
 import Display from '../Display/Display';
 import Keypad from '../Keypad/Keypad';
