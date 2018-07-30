@@ -3,7 +3,7 @@
 ## Local Setup
 
 ```sh
-$ git clone git@github.com:testdrivenio/react-calculator.git
+$ git clone git@github.com:calebpollman/react-calculator.git
 ```
 
 ```sh
